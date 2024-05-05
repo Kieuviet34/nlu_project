@@ -67,6 +67,7 @@ nlu:
     - bạn là con người à?
     - tôi đang nói chuyện với một bot à?
     - tôi đang nói chuyện với một con người à?
+    - bạn có thể làm gì ? 
 - intent: give_time
   examples: |
     - bạn có thể cho tôi biết mấy giờ không?
@@ -165,6 +166,8 @@ nlu:
     - Thời gian kết thúc của [môn học](subject_name) đó là khi nào?
     - [môn](subject_name) [Quản trị công ty](subject_name) có bao nhiêu tín chỉ
     - [Luật kinh tế 1](subject_name) có bao nhiêu tín chỉ
+    - Em muốn biết thông tin về môn [quản trị khách sạn]{"entity":"subject_name"} của khóa [K57]{"entity":"student_year"}
+    - Xin hỏi về chi tiết của môn [kế toán quốc tế]{"entity":"subject_name"} của khóa học [K56A]{"entity":"student_year"}.
 - intent: stop
   examples: |
     - Dừng lại

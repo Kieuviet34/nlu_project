@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-schedule",
+      "2": "I-schedule",
+      "3": "L-schedule",
+      "4": "U-schedule",
+      "5": "B-student_year",
+      "6": "I-student_year",
+      "7": "L-student_year",
+      "8": "U-student_year",
+      "9": "B-subject_name",
+      "10": "I-subject_name",
+      "11": "L-subject_name",
+      "12": "U-subject_name",
+      "13": "B-user_name",
+      "14": "I-user_name",
+      "15": "L-user_name",
+      "16": "U-user_name",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-schedule": 1,
+      "I-schedule": 2,
+      "L-schedule": 3,
+      "U-schedule": 4,
+      "B-student_year": 5,
+      "I-student_year": 6,
+      "L-student_year": 7,
+      "U-student_year": 8,
+      "B-subject_name": 9,
+      "I-subject_name": 10,
+      "L-subject_name": 11,
+      "U-subject_name": 12,
+      "B-user_name": 13,
+      "I-user_name": 14,
+      "L-user_name": 15,
+      "U-user_name": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
