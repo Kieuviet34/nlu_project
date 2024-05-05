@@ -8,6 +8,8 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
+  - intent: answer_name
+  - action: utter_greet_with_name
 
 - story: sad path 1
   steps:
@@ -34,3 +36,36 @@ stories:
   - action: utter_greet
   - intent: give_time
   - action: action_show_time
+- story: chào hỏi
+  steps:
+  - intent: answer_name
+  - action: utter_greet_with_name
+
+- story: user interupt
+  steps: 
+  - intent: ask_subject_info
+  - action: action_show_subject_info
+  - active_loop: action_show_subject_info
+  - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: ask_subject_info
+    entities:
+    - subject_name: Luật kinh tế 1
+  - slot_was_set:
+    - subject: Luật kinh tế 1
+  - action: action_show_subject_info
+  - action: utter_submit
+  - intent: give_time
+  - action: action_show_time
+  - intent: ask_class_schedule
+    entities:
+    - schedule: lịch học
+  - action: get_schedule_info

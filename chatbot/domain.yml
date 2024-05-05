@@ -1,36 +1,74 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - give_time
+- affirm
+- answer_name
+- ask_class_schedule
+- ask_subject_info
+- bot_challenge
+- deny
+- general_support
+- give_time
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- stop
+entities:
+- subject_name
+- schedule
+- user_name
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_name
+  subject:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: subject_name
+forms:
+  action_show_subject_info:
+    required_slots:
+    - subject
 actions:
-  - action_show_time
+- get_schedule_info
+- utter_cheer_up
+- utter_greet
+- utter_submit
+- utter_did_that_help
+- action_show_time
+- utter_goodbye_with_name
+- action_show_subject_info
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
+  - text: Bạn có khỏe không?
+  - text: Chào bạn! Bạn cần Bot giúp gì không?
+  - text: |-
+      Xin chào!
+      Tôi là Bot, rất hân hạnh được trò chuyện với bạn!
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: 'Có thứ để làm bạn vui lên này:'
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Điều đó có giúp được gì không?
   utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Tuyệt, tiếp tục đi!
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
+  utter_greet_with_name:
+  - text: |-
+      Xin chào {name}!
+      {name} cần Bot giúp gì không?
+  utter_goodbye_with_name:
+  - text: |-
+      Tạm biệt {name}!
+      Hãy quay lại với Bot khi {name} cần nhé!
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+  - text: Chào, tôi là chatbot RASA.
+  utter_submit:
+  - text: Cảm ơn bạn! Đã nhận được thông tin về môn {subject}.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

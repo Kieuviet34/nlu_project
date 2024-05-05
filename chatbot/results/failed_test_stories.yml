@@ -1,0 +1,51 @@
+version: "3.1"
+stories:
+- story: happy path 1 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet  # predicted: answer_name: hello there!
+  - action: utter_greet
+  - intent: mood_great  # predicted: answer_name: [amazing](user_name)
+  - action: utter_happy
+- story: happy path 2 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet  # predicted: answer_name: hello there!
+  - action: utter_greet
+  - intent: mood_great  # predicted: answer_name: [amazing](user_name)
+  - action: utter_happy
+  - intent: goodbye  # predicted: answer_name: bye-bye!
+  - action: utter_goodbye  # predicted: utter_goodbye_with_name
+- story: sad path 1 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet  # predicted: answer_name: hello
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: answer_name: not good
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm  # predicted: greet: [yes](user_name)
+  - action: utter_happy
+- story: sad path 2 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet  # predicted: answer_name: hello
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: answer_name: not good
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny  # predicted: answer_name: not really
+  - action: utter_goodbye
+- story: sad path 3 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: answer_name: [very](user_name) terrible
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny  # predicted: greet: no
+  - action: utter_goodbye
+- story: say goodbye (.\tests\test_stories.yml)
+  steps:
+  - intent: goodbye  # predicted: answer_name: bye-bye!
+  - action: utter_goodbye  # predicted: utter_goodbye_with_name
+- story: bot challenge (.\tests\test_stories.yml)
+  steps:
+  - intent: bot_challenge  # predicted: bot_challenge: are [you](user_name) a bot?
+  - action: utter_iamabot

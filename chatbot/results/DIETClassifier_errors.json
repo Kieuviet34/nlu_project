@@ -1,0 +1,31 @@
+[
+  {
+    "text": "Môn học nào sẽ được học trong ngày hôm nay?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Môn học",
+        "entity": "subject_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subject_name",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9885442852973938,
+        "value": "Môn học",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "subject_name",
+        "start": 20,
+        "end": 23,
+        "confidence_entity": 0.5396128296852112,
+        "value": "học",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

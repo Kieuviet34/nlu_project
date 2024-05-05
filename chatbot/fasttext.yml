@@ -1,0 +1,11 @@
+language: vi
+pipeline:
+- name: VietnameseTokenizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: fasttext_featurizer.FastTextFeaturizer
+  cache_dir: "./Fasttext/vector/cc.vi.300.bin"
+  file: cc.vi.300.bin

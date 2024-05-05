@@ -1,0 +1,42 @@
+{
+  "user_name": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 35,
+    "confused_with": {}
+  },
+  "schedule": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 40,
+    "confused_with": {}
+  },
+  "subject_name": {
+    "precision": 0.9821428571428571,
+    "recall": 1.0,
+    "f1-score": 0.9909909909909909,
+    "support": 55,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9923664122137404,
+    "recall": 1.0,
+    "f1-score": 0.9961685823754789,
+    "support": 130
+  },
+  "macro avg": {
+    "precision": 0.9940476190476191,
+    "recall": 1.0,
+    "f1-score": 0.9969969969969968,
+    "support": 130
+  },
+  "weighted avg": {
+    "precision": 0.9924450549450549,
+    "recall": 1.0,
+    "f1-score": 0.9961884961884961,
+    "support": 130
+  },
+  "accuracy": 0.9989361702127659
+}

@@ -1,97 +1,174 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
+    - xin chào
+    - chào bạn
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
+    - chào nhé
+    - chào buổi sáng
+    - chào buổi tối
+    - đi thôi
+    - buổi sáng tốt lành
+    - buổi tối tốt lành
+    - Chào
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
+    - tạm biệt
+    - tốt nhé
+    - hẹn gặp lại sau
+    - chúc ngủ ngon
+    - tạm biệt nhé
+    - chúc bạn một ngày tốt lành
+    - hẹn gặp lại
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
+    - có
+    - đúng rồi
+    - chắc chắn
+    - dĩ nhiên
+    - nghe có vẻ tốt
+    - đúng vậy
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
+    - không
+    - không bao giờ
+    - tôi không nghĩ vậy
+    - không thích thế
+    - không đường
+    - không thực sự
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
+    - hoàn hảo
+    - tuyệt vời
+    - cảm giác như một vị vua
+    - tôi cảm thấy rất tốt
+    - tôi tuyệt vời
+    - tôi sẽ cứu thế giới
+    - rất hứng khởi
+    - rất tốt
+    - tuyệt vời như vậy
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
+    - ngày của tôi thật tồi tệ
+    - tôi buồn
+    - tôi không cảm thấy tốt lắm
+    - tôi thất vọng
+    - rất buồn
+    - tôi thật buồn
+    - buồn
+    - không hạnh phúc
+    - không tốt
+    - không tốt lắm
+    - thật buồn
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - bạn là bot à?
+    - bạn là con người à?
+    - tôi đang nói chuyện với một bot à?
+    - tôi đang nói chuyện với một con người à?
 - intent: give_time
   examples: |
-    - call you tell me what time it is?
-    - tell me the time
-    - got the time
-    - what time is ti?
+    - bạn có thể cho tôi biết mấy giờ không?
+    - cho tôi biết thời gian
+    - có giờ không?
+    - bây giờ là mấy giờ?
+    - Cho tôi biết bây giờ là mấy giờ
+- intent: answer_name
+  examples: |
+    - Tôi tên là [Nam](user_name)
+    - Chị tên là [Hoa](user_name)
+    - Anh tên là [Long](user_name)
+    - Mình tên là [Phúc](user_name)
+    - Mình tên [Phát](user_name)
+    - Em tên [Hà](user_name) nhé
+    - Huy [Nam](user_name)
+    - Gọi mình là [Phụng](user_name) nha
+    - Tôi tên [Hoàng](user_name)
+    - chị tên [Cúc](user_name)
+    - anh tên [Đức](user_name)
+    - [Tuấn](user_name) nhé
+    - [Bình](user_name)
+    - [Lĩnh](user_name)
+    - [Viễn](user_name)
+    - [Duy](user_name)
+    - [Tú](user_name)
+    - [Tâm](user_name)
+    - [Xuân](user_name)
+    - [Kiều](user_name)
+    - [Thành](user_name)
+    - [Đăng](user_name)
+    - [Đạt](user_name)
+    - [Vy](user_name)
+    - [Loan](user_name)
+    - [Luân](user_name)
+    - [Quang](user_name)
+    - [Thuận](user_name)
+    - [Trọng](user_name)
+    - [An](user_name)
+    - [Kim](user_name)
+    - [Hằng](user_name)
+    - [Cường](user_name)
+    - [Phú](user_name)
+    - [Thiện](user_name)
+- intent: general_support
+  examples: |
+    - Tôi cần tìm kiếm thông tin về tài liệu học tập.
+    - Tôi muốn liên hệ với ai để được hỗ trợ về vấn đề?
+    - Tôi có thể góp ý về chất lượng đào tạo ở đâu?
+    - Website của nhà trường ở đâu?
+    - Làm thế nào để truy cập hệ thống sinh viên?
+    - Tôi quên mật khẩu đăng nhập hệ thống sinh viên.
+    - Tôi cần hỗ trợ về vấn đề kỹ thuật khi sử dụng phần mềm quản lý đào tạo.
+- intent: ask_class_schedule
+  examples: |
+    - Anh/chị có [lịch học](schedule) như thế nào?
+    - Cho em xem [lịch học](schedule) được không?
+    - [Lịch học](schedule) của tôi là gì?
+    - [Lịch học](schedule) của mình như thế nào?
+    - Hãy cho tôi biết [lịch học](schedule) của tôi.
+    - [Lịch học](schedule) của tôi vào thứ mấy?
+    - Bạn có thể chỉ cho tôi [lịch học](schedule) không?
+    - [Lịch học](schedule) của tuần này như thế nào?
+    - Anh/chị có thể cho biết [lịch học](schedule) trong tuần này không?
+    - [Lịch học](schedule) của tôi vào ngày mai là gì?
+    - Hãy cho tôi biết [lịch học](schedule) của tuần sau.
+    - [Lịch học](schedule) của tôi vào buổi chiều như thế nào?
+    - Anh/chị có thể cho tôi biết [lịch học](schedule) của tháng này không?
+    - [Lịch học](schedule) của tôi có thay đổi không?
+    - Anh/chị có thể cho tôi biết [lịch học](schedule) của ngày mai không?
+    - [Lịch học](schedule) của tôi vào cuối tuần như thế nào?
+    - Anh/chị có thể chỉ cho tôi [lịch học](schedule) của thứ bảy không?
+    - [Lịch học](schedule) của tôi vào buổi sáng như thế nào?
+    - [Lịch học](schedule) của tôi vào thứ ba như thế nào?
+    - [Lịch học](schedule) của tôi vào thứ tư như thế nào?
+    - Cho em xem [lịch học](schedule) tuần này được không
+- intent: ask_subject_info
+  examples: |
+    - [Môn học](subject_name) nào sẽ được học trong ngày hôm nay?
+    - Hãy cho biết thông tin về môn [Quản trị công ty](subject_name) hôm nay.
+    - [Môn học](subject_name) tiếp theo là gì?
+    - Cho tôi biết về [môn học](subject_name) sắp tới.
+    - [Môn học](subject_name) tiếp theo là môn gì?
+    - [Môn học](subject_name) nào được dạy tiếp theo?
+    - [Luật kinh tế 1](subject_name) đó có bao nhiêu tín chỉ?
+    - Thời gian học của [Kinh tế du lịch](subject_name) đó là khi nào?
+    - [Quản trị sản xuất](subject_name) cần phải mang theo gì không?
+    - [Môn học](subject_name) đó có đòi hỏi kiến thức nền gì không?
+    - Thời lượng của [Kinh tế khách sạn](subject_name) là bao lâu?
+    - [Kế toán quốc tế](subject_name) đó có phần thực hành không?
+    - [Tài chính quốc tế](subject_name) sẽ được dạy ở phòng nào?
+    - [Môn học](subject_name) đó có cần sách giáo khoa không?
+    - Có phải [môn học](subject_name) đó đang trong giai đoạn thi?
+    - [Môn học](subject_name) đó có đề cương không?
+    - Thời gian bắt đầu của [Quản trị khách sạn](subject_name) đó là khi nào?
+    - Thời gian kết thúc của [môn học](subject_name) đó là khi nào?
+    - [môn](subject_name) [Quản trị công ty](subject_name) có bao nhiêu tín chỉ
+    - [Luật kinh tế 1](subject_name) có bao nhiêu tín chỉ
+- intent: stop
+  examples: |
+    - Dừng lại
+    - Ngưng lại
+    - Kết thúc
+    - Tạm biệt
+    - Thoát

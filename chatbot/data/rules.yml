@@ -5,9 +5,23 @@ rules:
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
-  - action: utter_goodbye
+  - action: utter_goodbye_with_name
 
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+- rule: Active form 
+  steps:
+  - intent: ask_subject_info
+  - action: action_show_subject_info
+  - active_loop: action_show_subject_info
+- rule: submit form
+  condition:
+  - active_loop: action_show_subject_info
+  steps:
+  - action: action_show_subject_info
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit
